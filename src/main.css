@@ -1,6 +1,69 @@
-#content {
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+table,
+th,
+td {
+  font-family: "Rubik";
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  min-height: 100vh; }
+
+body {
+  background-color: #2d3740;
   display: flex;
-  flex-direction: column;
+  flex-flow: row; }
+
+#sidebar-container {
+  display: flex;
+  position: relative;
+  width: 16em; }
+
+#sidebar {
+  position: fixed;
+  padding-top: 3.5em;
+  width: 16em; }
+  #sidebar .top {
+    border-bottom: 2px solid rgba(218, 224, 212, 0.1);
+    padding-bottom: 1.5em; }
+  #sidebar .item {
+    align-items: center;
+    border-left: 3px solid #2d3740;
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    color: #8b9492;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.7em; }
+    #sidebar .item:hover, #sidebar .item.active {
+      background-color: #44525f;
+      border-left: 3px solid #7ecfd4;
+      color: #fff; }
+  #sidebar .bottom {
+    padding-top: 1.5em; }
+
+#content {
   flex: 1;
   padding: 3.2em 2em;
   color: #fff; }
@@ -47,7 +110,7 @@
         #content .card .image .circle p {
           text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15); }
     #content .card img {
-      /* cursor: pointer; */
+      cursor: pointer;
       border-radius: 0.2em;
       width: 13em;
       margin-bottom: 1em;
@@ -56,22 +119,27 @@
       color: #8b9492;
       font-size: 0.9em;
       margin-top: 0.3em; }
-  #content .more-button {
+
+@media (min-width: 1600px) {
+  body {
+    margin: 0 10vw; } }
+
+@media (min-width: 2540px) {
+  body {
+    margin: 0 30vw; } }
+
+@media (max-width: 910px) {
+  #sidebar-container {
+    display: none !important; }
+  #search-container {
+    display: none; }
+  #content {
+    padding: 0.5em;
+    display: flex;
+    flex-flow: column;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background: transparent;
-    color: #fff;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    border-radius: 0.5rem
-  }
-    #content .more-button:hover,
-    #content .more-button:focus {
-      background: #44525f;
-    }
-    #content .more-button:disabled,
-    #content .more-button[disabled]{
-      background: #8b9492;
-      cursor: not-allowed;
-    }
+    justify-content: center; }
+  .group-card {
+    justify-content: center; }
+  .image {
+    margin-right: 2.4em !important; } }

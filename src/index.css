@@ -34,3 +34,6 @@ body {
   background-color: #2d3740;
   display: flex;
   flex-flow: row; }
+
+#root {
+  min-width: 100vw; }
